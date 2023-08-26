@@ -40,3 +40,7 @@ To run the app locally, follow these steps:
 `npm run dev`
 
 6. Open your browser and navigate to http://localhost:3000 to see the app running.
+
+
+## Deployed on Vercel Platform
+https://weather-forecast-bay-mu.vercel.app/
