@@ -36,7 +36,7 @@ const Home = () => {
       setWeatherData({
         location: `${data.name}, ${data.sys.country}`,
         description: data.weather[0].description,
-        temperature: (data.main.temp * 9) / 5 + 32,
+        temperature: (data.main.temp * 9) / 5 + 32, // Celsius to Fahrenheit conversion
         humidity: data.main.humidity,
         windSpeed: data.wind.speed,
         date: data.dt
@@ -62,7 +62,7 @@ const Home = () => {
         dailyData.map((item: any) => ({
           date: item.dt,
           icon: item.weather[0].icon,
-          temp: (item.main.temp * 9) / 5 + 32,
+          temp: (item.main.temp * 9) / 5 + 32
         }))
       );
     } else {

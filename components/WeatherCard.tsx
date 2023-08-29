@@ -18,7 +18,7 @@ interface WeatherCardProps {
 const WeatherCard: React.FC<WeatherCardProps> = ({ data, className }) => {
   let icon;
   let color;
-  const windSpeed = data.windSpeed * 2.237;
+  const windSpeed = data.windSpeed * 2.237; // convertMetersPerSecToMPH
   const roundedWindSpeed = Math.round(windSpeed);
   const dataDescriptionStr = data.description.toLowerCase();
 
@@ -48,7 +48,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ data, className }) => {
     color = 'gray';
   }
 
-  if (data.windSpeed * 2.237 >= 20) {
+  if (windSpeed * 2.237 >= 20) {
     icon = faWind;
     color = 'gray';
   }
